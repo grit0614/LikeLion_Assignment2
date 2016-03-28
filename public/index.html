@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+        <!-- Bootstrap -->
+        
+        <!-- jQuery -->        
+        <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        <!-- jQuery -->    
+        
+        <!-- Bootstrap CSS -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    </head>
+    <body>
+        <div class="container" style="margin-top: 20px; text-align: center">
+        <div class="row">
+
+            <div class="col-md-8 col-xs-6">
+                <div class="well well-sm" id="showme">Muffin</div>
+            </div>
+            <div class="col-md-4 col-xs-6">
+                <div class="well well-sm" id="book">Icecream Cake</div>    
+            </div>
+            
+            <!-- offset은 왼쪽으로부터 몇칸 띄어서 놓을지 정하는 것 -->
+            <div class="col-md-4 col-xs-6 col-md-offset-8">
+                <div class="well well-sm" id="clickme">Macaron</div>    
+            </div>
+        </div>
+        </div>
+        
+        
+        <!-- jQuery를 적용하려면 <script></script> 사이에 넣어야 한다. 위치는 상관없다곤 하는데 난 왜 body에서만 되지? -->
+        <script>
+        
+            // clickme가 눌렸을 때,
+            $( "#clickme" ).click(function() {
+                // book이란 녀석을 fadeout해라. (참고: #xxx = id="xxx")
+                $( "#book" ).fadeOut( "slow", function() {
+                // Animation complete.
+                });
+            });
+  
+        
+            // showme가 눌렸을 때,
+            $( "#showme" ).click(function() {
+                // book라는 녀석을 보이게 해라
+                $( "#book" ).fadeIn( "slow", function() {
+                // Animation complete
+                });
+            });
+            
+        </script>      
+    </body>
+</html>
